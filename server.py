@@ -5,6 +5,7 @@ import os
 
 app = Flask(__name__)
 
+
 def load_sprites(folder):
     sprites = {}
     for filename in os.listdir(folder):
