@@ -31,7 +31,7 @@
             var pokemon2 = document.getElementById('pokemon2').value;
 
             // Sunucuya istekte bulunarak Pokémonları birleştir
-            fetch(`/fuse?p1=${pokemon1}&p2=${pokemon2}`)
+            fetch('/fuse?p1=${pokemon1}&p2=${pokemon2}')
                 .then(response => response.blob())
                 .then(blob => {
                     var url = URL.createObjectURL(blob);
@@ -46,7 +46,7 @@
                 });
 
             // Füzyon ismini al
-            fetch(`/fusion_name?p1=${pokemon1}&p2=${pokemon2}`)
+            fetch('/fusion_name?p1=${pokemon1}&p2=${pokemon2}')
                 .then(response => response.text())
                 .then(name => {
                     document.getElementById('fusionName').textContent = `Fusion Name: ${name}`;
