@@ -49,7 +49,7 @@
             fetch('/fusion_name?p1=${pokemon1}&p2=${pokemon2}')
                 .then(response => response.text())
                 .then(name => {
-                    document.getElementById('fusionName').textContent = `Fusion Name: ${name}`;
+                    document.getElementById('fusionName').textContent = 'Fusion Name: ${name}';
                 });
         }
     </script>
